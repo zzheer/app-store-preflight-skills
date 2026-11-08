@@ -17,16 +17,16 @@ If the app offers **Sign in with Apple** (SIWA), the implementation must follow 
 ### Check for post-SIWA data requests
 ```bash
 # Find SIWA implementation
-grep -rn "ASAuthorizationAppleIDProvider\|SignInWithApple\|appleIDCredential\|apple.*sign.*in" --include="*.swift" --include="*.dart" .
+grep -rn "ASAuthorizationAppleIDProvider\|SignInWithApple\|appleIDCredential\|apple.*sign.*in" --include="*.swift" --include="*.dart" --include="*.ts" --include="*.tsx" --include="*.js" --exclude-dir=node_modules .
 
 # Check if name/email is requested AFTER sign-in
-grep -rn "askForName\|askForEmail\|nameTextField\|emailTextField\|profileSetup\|completeProfile" --include="*.swift" --include="*.dart" .
+grep -rn "askForName\|askForEmail\|nameTextField\|emailTextField\|profileSetup\|completeProfile" --include="*.swift" --include="*.dart" --include="*.ts" --include="*.tsx" --include="*.js" --exclude-dir=node_modules .
 ```
 
 ### Check for relay email handling
 ```bash
 # Ensure the app doesn't reject relay emails
-grep -rn "privaterelay.appleid.com\|@privaterelay\|private.icloud.com\|email.*validation\|isValid.*email" --include="*.swift" --include="*.dart" .
+grep -rn "privaterelay.appleid.com\|@privaterelay\|private.icloud.com\|email.*validation\|isValid.*email" --include="*.swift" --include="*.dart" --include="*.ts" --include="*.tsx" --include="*.js" --exclude-dir=node_modules .
 ```
 
 If a hit hard-codes `privaterelay.appleid.com` (for example to detect relay users or allowlist domains) without `private.icloud.com` → ❌. New SIWA users will get the new domain.
