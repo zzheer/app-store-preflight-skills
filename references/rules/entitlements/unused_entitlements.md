@@ -24,6 +24,11 @@ Apps should only declare entitlements that are **actively used** by the app. App
 
 ## How to Detect
 
+> **Expo / CNG projects**: entitlements come from `expo.ios.entitlements`,
+> `expo.ios.associatedDomains`, `expo.ios.usesAppleSignIn` and config plugins
+> (push, iCloud, app groups) in `app.json` / `app.config.js`. Audit those keys
+> and the plugin list; there is no committed `.entitlements` file to `find`.
+
 ### Find entitlements files
 ```bash
 # Find all entitlements files

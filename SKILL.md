@@ -63,6 +63,24 @@ If you already have metadata in another layout (for example fastlane
 `metadata/`), either adapt the file-path examples to that structure or pull the
 canonical `asc` layout first.
 
+### Expo / EAS Metadata projects
+
+Expo apps that use EAS Metadata keep listing data in `store.config.json`
+instead of `./metadata/`. Map the rule paths as follows (read-only `jq`):
+
+| `asc` layout | `store.config.json` path |
+|--------------|--------------------------|
+| `./metadata/version/<VERSION>/<LOCALE>.json` `.description` | `.apple.info["<LOCALE>"].description` |
+| keywords / promo / What's New | `.apple.info["<LOCALE>"].keywords`, `.promoText`, `.releaseNotes` |
+| `./metadata/app-info/*.json` `.privacyPolicyUrl` | `.apple.info["<LOCALE>"].privacyPolicyUrl` |
+| review notes | `.apple.review.notes` |
+| version | `.apple.version` |
+
+Localized privacy URLs (for example `/de/privacy-policy`) are valid; don't
+flag them as missing. With Continuous Native Generation (no committed `ios/`),
+read `app.json` / `app.config.js` and config plugins instead of `Info.plist`,
+`*.entitlements` and `project.pbxproj`.
+
 ## Step 3: Run Rejection Rule Checks
 
 For each category, load the relevant rule files from `references/rules/` and inspect. Each rule contains: **What to Check**, **How to Detect**, **Resolution**, and **Example Rejection**.

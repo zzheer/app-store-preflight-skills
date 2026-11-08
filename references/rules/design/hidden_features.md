@@ -21,7 +21,7 @@ Code that checks whether it's running under review, then changes behavior, is th
 grep -rnE "sandboxReceipt|isTestFlight|isInReview|inReview|reviewMode|isReviewer|appReview|underReview|AppTransaction.*environment|\.sandbox\b|\.xcode\b" \
   --include="*.swift" --include="*.m" --include="*.dart" --include="*.ts" --include="*.tsx" --include="*.js" .
 ```
-For each hit, check what is enabled or disabled. Gating **features** on these checks → ❌. Gating only analytics, logging, or receipt-validation endpoints → ✅.
+Short tokens such as `reviewMode` / `inReview` also match unrelated domain fields (for example a content "review mode" enum); read each hit before flagging. For each hit, check what is enabled or disabled. Gating **features** on these checks → ❌. Gating only analytics, logging, or receipt-validation endpoints → ✅.
 
 ### Time-bomb and date gates
 ```bash

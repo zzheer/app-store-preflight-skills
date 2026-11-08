@@ -23,6 +23,11 @@ Starting Spring 2024, apps must include a **Privacy Manifest** (`PrivacyInfo.xcp
 
 ## How to Detect
 
+> **Expo / CNG projects**: there is no committed `ios/` folder, so `find` returns nothing.
+> Expo generates `PrivacyInfo.xcprivacy` at prebuild from `expo.ios.privacyManifests` in
+> `app.json` / `app.config.js` and merges the manifests bundled with native dependencies.
+> Check that key and the dependencies' manifests rather than reporting the file as missing.
+
 ### Check for Privacy Manifest existence
 ```bash
 # Look for PrivacyInfo.xcprivacy in the project

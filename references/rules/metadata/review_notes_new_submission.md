@@ -74,7 +74,7 @@ Specific cases Apple calls out:
 
 1. **Pull review notes** from App Store Connect metadata:
    ```bash
-   asc metadata pull --output-dir ./metadata
+   asc metadata pull --app "<APP_ID>" --version "<VERSION>" --dir ./metadata
    ```
    Or inspect the local `metadata/review_information/notes.txt` (fastlane convention).
 
