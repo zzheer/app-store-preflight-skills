@@ -61,6 +61,7 @@ All rules live in `references/rules/`, organized by category:
 | [china_storefront](./references/rules/metadata/china_storefront.md) | 5 | OpenAI/ChatGPT/Gemini references (China) |
 | [accurate_metadata](./references/rules/metadata/accurate_metadata.md) | 2.3.4 | Device frames in app preview videos |
 | [subscription_metadata](./references/rules/metadata/subscription_metadata.md) | 3.1.2 | Missing ToS/EULA and Privacy Policy links |
+| [eu_dsa_trader_status](./references/rules/metadata/eu_dsa_trader_status.md) | EU DSA | Trader status and contact details not declared in App Store Connect |
 
 ### Subscriptions (`references/rules/subscription/`)
 
