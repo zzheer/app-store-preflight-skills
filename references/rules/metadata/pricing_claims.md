@@ -18,7 +18,7 @@ Open App Store Connect → your app → Pricing and Availability and note whethe
 
 ### Grep metadata for price words (all apps) and "free" words (paid apps)
 ```bash
-grep -rniE "\bfree\b|gratis|kostenlos|gratuit|gratuito|ücretsiz|免费|無料|무료|\\\$[0-9]|€[0-9]|[0-9]+ ?(usd|eur|try)|price|discount|% off" ./metadata
+grep -rniE "\bfree\b|gratis|kostenlos|gratuit|gratuito|ücretsiz|免费|無料|무료|\\\$[0-9]|€[0-9]|[0-9] ?(€|₺|£|\\\$)|[0-9]+ ?(usd|eur|try|gbp)|price|discount|% off" ./metadata
 ```
 Treat hits as candidates to review, not automatic rejections. ❌ when a price appears in the name, subtitle or keywords of any app, or when a paid app calls itself free anywhere. Phrases like "ad-free", "free updates" or "discount calculator" are usually fine in the description.
 
