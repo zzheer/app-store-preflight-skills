@@ -19,6 +19,7 @@ Guidelines specifically applying to apps in the Kids Category or apps targeting 
 - [ ] **1.3** — Once in Kids Category, must continue meeting guidelines in all subsequent updates
 - [ ] **5.1.4(b)** — Third-party contextual ads only if service has documented Kids-specific policies with human review
 - [ ] **2.3.6** — Age rating accurately reflects content
+- [ ] **2.3.6** — Answer the new **Shared Location** and **Dating & Relationships** age rating questions (from November 16, 2026; required by January 12, 2027); location sharing with others is especially sensitive for child users (see `all_apps.md`)
 - [ ] **2.5.18** — No ads in extensions, widgets, App Clips, keyboards, or watchOS
 
 ## Parental Gate Requirements
@@ -30,7 +31,8 @@ Guidelines specifically applying to apps in the Kids Category or apps targeting 
 
 Apple's age-assurance tools apply to every app with minor users, not just the Kids Category:
 
-- [ ] **Texas (since June 4, 2026), Utah, Louisiana** — Parental consent is required for minors' downloads, IAP, and significant app changes. Request the age category via the **Declared Age Range API**, and use the **PermissionKit Significant Change API** for significant updates. Handle the App Store server notification for revoked consent
+- [ ] **Texas (since June 4, 2026), Utah (check current enactment status), Louisiana (Act 481, effective July 1, 2026; [legislature](https://legis.la.gov/))** — Parental consent is required for minors' downloads, IAP, and significant app changes. Request the age category via the **Declared Age Range API**, and use the **PermissionKit Significant Change API** for significant updates. Handle the App Store server notification for revoked consent
+- [ ] **California (AB 1043, operative January 1, 2027)** — Request the age-range signal from the OS/App Store when the app is downloaded and launched; apps already installed and updated after January 1, 2026 must request it by July 1, 2027 ([AB 1043](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1043))
 - [ ] **Brazil, Australia, Singapore** — 18+ apps are blocked for unconfirmed adults; you may still need your own age confirmation
 - [ ] **Brazil** — Declaring loot boxes in the age rating questionnaire sets the Brazil rating to 18+
 - [ ] **Australia** — The 15+ rating is gone; apps with unrestricted web access, frequent medical info, or loot boxes are rated 16+

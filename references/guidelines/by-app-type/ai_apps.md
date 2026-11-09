@@ -25,6 +25,10 @@ Guidelines specifically applying to apps that use AI services (ChatGPT, Gemini, 
 - [ ] **5.1.1(iii)** — Data minimization: don't send more data to AI than necessary
 - [ ] **3.1.1** — AI features/credits unlocked via IAP (not external payment for digital content)
 
+## Legal (Not Guideline Text)
+
+- [ ] **EU AI Act Art. 50** — If available in the EU: tell users when they interact with an AI system, and label AI-generated or manipulated content (applies from August 2, 2026; the Art. 50(2) machine-readable marking duty has a grace period to December 2026) ([EU transparency rules](https://digital-strategy.ec.europa.eu/en/factpages/quick-facts-transparency-rules-ai-systems))
+
 ## China Storefront Specific
 
 Banned AI terms in metadata for China (all locales, not just zh-Hans):
