@@ -27,7 +27,7 @@ Guidelines specifically applying to apps that use AI services (ChatGPT, Gemini, 
 
 ## Legal (Not Guideline Text)
 
-- [ ] **EU AI Act Art. 50** — If available in the EU: tell users when they interact with an AI system, and label AI-generated or manipulated content (applies from August 2, 2026; the Art. 50(2) machine-readable marking duty has a grace period to December 2026) ([EU transparency rules](https://digital-strategy.ec.europa.eu/en/factpages/quick-facts-transparency-rules-ai-systems))
+- [ ] **EU AI Act Art. 50** — If available in the EU: tell users when they interact with an AI system, and label AI-generated or manipulated content (applies from August 2, 2026; check the Commission transparency page for any transitional period for AI systems already on the market before that date) ([EU transparency rules](https://digital-strategy.ec.europa.eu/en/factpages/quick-facts-transparency-rules-ai-systems))
 
 ## China Storefront Specific
 

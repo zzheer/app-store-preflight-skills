@@ -22,7 +22,7 @@ Not guideline text, but these block submission or distribution:
 - [ ] **2.3.6** — Age rating questionnaire answered, including the **social media capability** questions (required since September 2026)
 - [ ] **2.3.6** — Age rating questionnaire answers the new **Shared Location** and **Dating & Relationships** questions (available from November 16, 2026; required for all apps by January 12, 2027; dating apps get a minimum 18+ rating) ([Apple news](https://developer.apple.com/news/), 2026-11-02)
 - [ ] **Regulated medical device status** — Required if the app is in Health & Fitness / Medical, or declares frequent medical info, and ships in the EEA, UK, or US (see `health_fitness.md`)
-- [ ] **iPhone Duo screenshots** — ⚠️ Required for all submissions starting April 2027 (unverified — source needed)
+- **iPhone Duo screenshots (unverified, informational only)** — reported as required from April 2027; not found on Apple's pages, so not a blocking check until Apple publishes it
 - [ ] **Age assurance laws** — If distributed in Texas, Utah, Louisiana, California, Brazil, Australia, or Singapore: check obligations under the Declared Age Range API and PermissionKit Significant Change API (see `kids.md`)
 
 ## Metadata

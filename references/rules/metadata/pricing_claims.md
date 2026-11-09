@@ -7,20 +7,20 @@
 Metadata must not misstate what the app costs ([guidelines](https://developer.apple.com/app-store/review/guidelines/)):
 
 - **2.3.1(a)** — No false prices or misleading descriptions of what the user pays.
-- **2.3.7** — No pricing information in app name, subtitle, keywords, or screenshots.
+- **2.3.7** — No pricing information in app name, subtitle, keywords, or screenshots. This applies to every app, free or paid.
 - **"Free" claims** — A paid-upfront app must not call itself "free", "gratis", "kostenlos", "gratuit", "ücretsiz", etc. in any locale.
-- **Section 3 intro** — Pricing is up to you, but Apple rejects apps that try to cheat users with irrationally high prices and "clear rip-offs". A **paid-upfront app that also charges IAP or shows ads** is high-risk: the metadata and review notes must make clear what the upfront price includes and what costs extra or shows ads.
+- **Section 3 intro** — Pricing is up to you, but Apple rejects apps that try to cheat users with irrationally high prices and "clear rip-offs". *Practitioner guidance, not guideline text:* a paid-upfront app that also charges IAP or shows ads invites that scrutiny, so the metadata and review notes should make clear what the upfront price includes and what costs extra or shows ads.
 
 ## How to Detect
 
 ### Check the price tier
-Open App Store Connect → your app → Pricing and Availability and note whether the base price is above free. If the app is free, only the IAP/ads wording and false-price checks apply.
+Open App Store Connect → your app → Pricing and Availability and note whether the base price is above free. The 2.3.7 pricing-word check below applies to all apps; the "free" claim check applies only to paid apps.
 
-### Grep metadata for price and "free" words (paid apps)
+### Grep metadata for price words (all apps) and "free" words (paid apps)
 ```bash
 grep -rniE "\bfree\b|gratis|kostenlos|gratuit|gratuito|ücretsiz|免费|無料|무료|\\\$[0-9]|€[0-9]|[0-9]+ ?(usd|eur|try)|price|discount|% off" ./metadata
 ```
-Any hit in name, subtitle, keywords, description, promotional text, or What's New for a paid app → ❌ (review each hit; "free updates" or "ad-free" may be acceptable in the description but never in name/subtitle/keywords).
+Treat hits as candidates to review, not automatic rejections. ❌ when a price appears in the name, subtitle or keywords of any app, or when a paid app calls itself free anywhere. Phrases like "ad-free", "free updates" or "discount calculator" are usually fine in the description.
 
 ### Paid + IAP/ads combination
 1. Confirm whether the binary includes an ads SDK (AdMob, AppLovin, etc.) or StoreKit IAP products.
