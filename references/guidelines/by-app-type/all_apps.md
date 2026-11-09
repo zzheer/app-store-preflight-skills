@@ -18,10 +18,12 @@ Guidelines that apply to **every** app regardless of category. Check these befor
 Not guideline text, but these block submission or distribution:
 
 - [ ] **SDK minimum** — Built with the iOS/iPadOS 26 SDK or later (tvOS, visionOS, watchOS 26 SDK likewise) — required since April 28, 2026
+- [ ] **SDK minimum (upcoming)** — Uploads must be built with the iOS/iPadOS 27 SDK or later starting April 2027 ([Apple news](https://developer.apple.com/news/), 2026-09-09)
 - [ ] **2.3.6** — Age rating questionnaire answered, including the **social media capability** questions (required since September 2026)
+- [ ] **2.3.6** — Age rating questionnaire answers the new **Shared Location** and **Dating & Relationships** questions (available from November 16, 2026; required for all apps by January 12, 2027; dating apps get a minimum 18+ rating) ([Apple news](https://developer.apple.com/news/), 2026-11-02)
 - [ ] **Regulated medical device status** — Required if the app is in Health & Fitness / Medical, or declares frequent medical info, and ships in the EEA, UK, or US (see `health_fitness.md`)
-- [ ] **iPhone Duo screenshots** — ⚠️ Required for all submissions starting April 2027
-- [ ] **Age assurance laws** — If distributed in Texas, Utah, Louisiana, Brazil, Australia, or Singapore: check obligations under the Declared Age Range API and PermissionKit Significant Change API (see `kids.md`)
+- **iPhone Duo screenshots (unverified, informational only)** — reported as required from April 2027; not found on Apple's pages, so not a blocking check until Apple publishes it
+- [ ] **Age assurance laws** — If distributed in Texas, Utah, Louisiana, California, Brazil, Australia, or Singapore: check obligations under the Declared Age Range API and PermissionKit Significant Change API (see `kids.md`)
 
 ## Metadata
 
@@ -40,11 +42,14 @@ Not guideline text, but these block submission or distribution:
 ## Privacy & Data
 
 - [ ] **5.1.1(i)** — Privacy policy linked in App Store Connect AND accessible in-app
+- [ ] **5.1.1(i)** — Policy content: what data is collected and how; names third parties it is shared with and confirms they provide equal protection; data retention/deletion policy; how users revoke consent or request deletion ([guidelines](https://developer.apple.com/app-store/review/guidelines/#data-collection-and-storage))
 - [ ] **5.1.1(ii)** — User consent secured for all data collection
+- [ ] **5.1.1(ii)** — Paid functionality must not be dependent on or require a user to grant access to this data (e.g., a paid tier or ad removal can't require tracking consent)
 - [ ] **5.1.1(iii)** — Only request data relevant to core functionality
 - [ ] **5.1.1(v)** — If account creation exists, account deletion must be offered
 - [ ] **5.1.2(i)** — Explicit permission before sharing personal data with third parties, **including third-party AI** (see `references/rules/privacy/third_party_ai_consent.md`)
 - [ ] **5.1.2(i)** — ATT framework required for cross-app tracking
+- [ ] **ATT (EU, informational)** — iOS 27.2 adds an alternative ATT prompt in the EU; if your tracking flow targets EU users, verify it against the new prompt ([Apple news](https://developer.apple.com/news/), 2026-09-16)
 - [ ] **5.1.2(i)** — Not requiring push notifications, location, or tracking to use the app or receive rewards
 - [ ] **Privacy Manifest** — `PrivacyInfo.xcprivacy` includes all Required Reason APIs
 
@@ -59,6 +64,12 @@ Not guideline text, but these block submission or distribution:
 - [ ] **2.5.5** — Fully functional on IPv6-only networks
 - [ ] **2.5.14** — Explicit consent for recording user activity
 - [ ] **4.5.3** — No spam, phishing, or unsolicited messages via Push Notifications, Live Activities, or Game Center
+
+## Advertising
+
+- [ ] **2.5.18** — Users can report inappropriate or age-inappropriate ads from within the app ([guidelines](https://developer.apple.com/app-store/review/guidelines/#software-requirements))
+- [ ] **2.5.18** — Interstitial ads have a visible close/skip control
+- [ ] **2.5.18** — No ads in widgets, extensions, App Clips, notifications, keyboards, or watchOS apps
 
 ## Business
 

@@ -115,8 +115,8 @@ For issues requiring manual intervention (screenshots, UI redesign), provide cle
 - **Subscription metadata** — Apple requires ToS/PP links in BOTH the App Store description AND the in-app subscription purchase screen. Missing either one is a separate rejection.
 - **Hidden features (2.5.19)** — Feature flags are allowed, but every feature they can turn on must be in the reviewed build, reachable by the reviewer, and described in the review notes. Gating features on review-environment checks (sandbox receipt, TestFlight) is bait-and-switch and can get the developer account terminated.
 - **Third-party AI (5.1.2(i))** — Proxying AI calls through your own backend doesn't exempt you: if prompts or user content reach OpenAI, Gemini, Anthropic, etc., the app needs a consent screen naming the provider *before* the first request.
-- **Sign in with Apple relay domain** — New relay addresses use `private.icloud.com` (from late 2026) in addition to `privaterelay.appleid.com`. Hard-coded domain checks break for new users.
-- **SDK minimum** — Uploads must be built with the iOS 26 SDK or later (since April 28, 2026). An older Xcode fails at upload, not at review.
+- **Sign in with Apple relay domain** — New relay addresses use `private.icloud.com` (from late 2026; unverified, source needed) in addition to `privaterelay.appleid.com`. Hard-coded domain checks break for new users.
+- **SDK minimum** — Uploads must be built with the iOS 26 SDK or later (since April 28, 2026); the iOS 27 SDK is required from April 2027. An older Xcode fails at upload, not at review.
 - **macOS entitlements** — Apple will ask you to justify every temporary exception entitlement (`com.apple.security.temporary-exception.*`). Remove entitlements you don't actively use.
 
 ## Adding New Rules

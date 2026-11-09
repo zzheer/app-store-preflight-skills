@@ -60,6 +60,7 @@ All rules live in `references/rules/`, organized by category:
 | [apple_trademark](./references/rules/metadata/apple_trademark.md) | 5.2.5 | Apple device images in icon, Apple trademark misuse |
 | [china_storefront](./references/rules/metadata/china_storefront.md) | 5 | OpenAI/ChatGPT/Gemini references (China) |
 | [accurate_metadata](./references/rules/metadata/accurate_metadata.md) | 2.3.4 | Device frames in app preview videos |
+| [pricing_claims](./references/rules/metadata/pricing_claims.md) | 2.3.1(a), 2.3.7 | Prices in any app's name/subtitle/keywords; "free" claims in a paid app's metadata; paid + IAP/ads disclosure |
 | [subscription_metadata](./references/rules/metadata/subscription_metadata.md) | 3.1.2 | Missing ToS/EULA and Privacy Policy links |
 
 ### Subscriptions (`references/rules/subscription/`)

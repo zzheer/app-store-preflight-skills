@@ -10,7 +10,7 @@ If the app offers **Sign in with Apple** (SIWA), the implementation must follow 
 1. **Asking for name/email after SIWA** — The Authentication Services framework already provides name and email (if the user chooses to share). Do not prompt for this information again.
 2. **Non-standard button styling** — The SIWA button must use Apple's provided `ASAuthorizationAppleIDButton` or equivalent, not a custom-designed button.
 3. **Hidden or de-emphasized SIWA** — If other social logins are shown (Google, Facebook, etc.), SIWA must be equally prominent.
-4. **Not handling the "Hide My Email" relay** — The app must work with Apple's relay email addresses (`*@privaterelay.appleid.com`, and from late 2026 **`*@private.icloud.com`** for new addresses). Email validators, allowlists, and domain checks must accept both.
+4. **Not handling the "Hide My Email" relay** — The app must work with Apple's relay email addresses (`*@privaterelay.appleid.com`). Email validators, allowlists, and domain checks must accept them. (A reported additional `*@private.icloud.com` relay domain is unverified; accepting it is harmless, but missing it is not a rejection criterion until Apple documents it.)
 
 ## How to Detect
 
